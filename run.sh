@@ -1,18 +1,5 @@
 #!/bin/bash
 
-if [ "$#" -ne 1 ]; then
-    echo "Usage: ./run.sh <type>"
-    exit 1
-fi
-
-command_type=$1
-
-if [ $command_type != "train" -a $command_type != "decode" ]; then
-    echo "Command type should be \"train\" or \"decode\" "
-    exit 1
-fi
-
-
 rnn_type="gru"
 dir="${rnn_type}_grnn_32_dropout"
 
