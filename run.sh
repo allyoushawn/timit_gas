@@ -1,5 +1,12 @@
 #!/bin/bash
 
+if [ -f prepare_timit/setup.sh ]; then
+    . prepare_timit/setup.sh
+else
+    echo "ERROR: prepare_timit/setup.sh is missing!"
+    exit 1
+fi
+
 rnn_type="gru"
 dir="${rnn_type}_grnn_32_dropout"
 
