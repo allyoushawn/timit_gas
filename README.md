@@ -5,7 +5,14 @@ This is the implementation of the paper *Gate Activation Signal Analysis for Gat
 Our corpus is **TIMIT**. We use **tensorflow 1.1.0** (with **CUDA 8.0**) with **python3.5** for our implementation.
 
 
-### 1. Run the code
+### 1. Requirements
+1. tensorflow 1.1.0 GPU-enabled version
+2. numpy
+3. sklearn
+4. Kaldi
+5. matplotlib (for plotting curves)
+
+### 2. Run the code
 
 Prepare data with your own timit corpus with **prepare_timit**:
 
@@ -18,7 +25,7 @@ Prepare data with your own timit corpus with **prepare_timit**:
 
 The execute *./run.sh* to run the code.
 
-### 2. Specify hyper-parameters
+### 3. Specify hyper-parameters
 
 >run.sh: General settings
 > * rnn_type: specify use gru or lstm
@@ -40,7 +47,7 @@ The execute *./run.sh* to run the code.
 > * th: thresholds for segmentation
 
 
-### 3. GAS in code
+### 4. GAS in code
 
  tensor name | GRU | LSTM
 :-----------:|:---:|:-----:
@@ -51,7 +58,7 @@ The execute *./run.sh* to run the code.
 The encoder_g3 tensor for GRU will output all zeros.
 
 
-### 4. Reference
+### 5. Reference
 
 Bibilographic inforamtion for this work:
 
