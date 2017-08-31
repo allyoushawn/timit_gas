@@ -37,18 +37,18 @@ The execute *./run.sh* to run the code.
 > * test_bound_file: the bounds of testing data
 > * max_len: the max length of data for unrolling RNN. For TIMIT, the max len is 777 frames.
 > * enable_plt: if it is true, plot the curves of GAS and phoneme boundaries of a specified utterance.
-
-
-### 3. Gated Recurrent Neural Networks
-
-Our recurrent neural networks can be implemented with LSTM or GRU.
-Our model's basic structure is an autoencoder. An encoder with several
-feedforward hidden layers and a recurrent layer. After the recurrnt layer,
-a mirrored decoder structure is connected.
-
-The loss function of the basic autoencoder is reconstruction error:
-`Loss(X) = ||X - X'||^2`
+> * th: thresholds for segmentation
 
 
 
+### 3. GAS in code
 
+Table
+
+tensor_name GRU          LSTM      
+----------- ------------ -----------
+encoder_g1  update gate  forget gate
+encoder_g2  reset gate   input gate
+encoder_g3  X            output gate
+
+The encoder_g3 tensor for GRU will output all zeros.
