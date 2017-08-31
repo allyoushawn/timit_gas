@@ -51,3 +51,16 @@ The execute *./run.sh* to run the code.
 The encoder_g3 tensor for GRU will output all zeros.
 
 
+### 4. Reference
+
+Bibilographic inforamtion for this work:
+
+```
+@article{wang2017gate,
+  title={Gate Activation Signal Analysis for Gated Recurrent Neural Networks and Its Correlation with Phoneme Boundaries},
+  author={Wang, Yu-Hsuan and Chung, Cheng-Tao and Lee, Hung-yi},
+  journal={arXiv preprint arXiv:1703.07588},
+  year={2017}
+}
+
+```
