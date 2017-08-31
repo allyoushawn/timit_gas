@@ -43,7 +43,7 @@ The execute *./run.sh* to run the code.
 ### 3. GAS in code
 
 | tensor name | GRU | LSTM |
-|: ----------- :|: --- :|: ----- :|
+| : ----------- : | : --- : | : ----- : |
 | encoder_g1  | update gate | forget gate |
 | encoder_g2 | reset gate | input gate |
 | encoder_g3 | X | output gate |
