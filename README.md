@@ -40,15 +40,37 @@ The execute *./run.sh* to run the code.
 > * th: thresholds for segmentation
 
 
-
 ### 3. GAS in code
 
-Table
+tables
 
-tensor_name GRU          LSTM      
------------ ------------ -----------
-encoder_g1  update gate  forget gate
-encoder_g2  reset gate   input gate
-encoder_g3  X            output gate
+
+tensor name | GRU | LSTM
+----------- | --- | -----
+encoder_g1  | update gate | forget gate
+
+<table>
+  <tr>
+    <th>Option</th>
+    <th>Description</th>
+  </tr>
+  <tr>
+    <td>data</td>
+    <td>path to data files to supply the data that will be passed into templates.</td>
+  </tr>
+  <tr>
+    <td>engine</td>
+    <td>engine to be used for processing templates. Handlebars is the default.</td>
+  </tr>
+  <tr>
+    <td>ext</td>
+    <td>extension to be used for dest files.</td>
+  </tr>
+</table>
+
+encoder_g2 | reset gate | input gate
+encoder_g3 | X | output gate
 
 The encoder_g3 tensor for GRU will output all zeros.
+
+
