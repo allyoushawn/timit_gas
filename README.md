@@ -23,7 +23,7 @@ Prepare data with your own timit corpus with **prepare_timit**:
     the resulting scp files will be in
     **timit_gas/feature_scp, timit_gas/bounds**
 
-The execute *./run.sh* to run the code.
+Then execute *./run.sh* to run the code.
 
 ### 3. Specify hyper-parameters
 
