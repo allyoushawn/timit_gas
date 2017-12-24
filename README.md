@@ -63,11 +63,14 @@ The encoder_g3 tensor for GRU will output all zeros.
 Bibilographic inforamtion for this work:
 
 ```
-@article{wang2017gate,
-  title={Gate Activation Signal Analysis for Gated Recurrent Neural Networks and Its Correlation with Phoneme Boundaries},
-  author={Wang, Yu-Hsuan and Chung, Cheng-Tao and Lee, Hung-yi},
-  journal={arXiv preprint arXiv:1703.07588},
-  year={2017}
+@inproceedings{Wang2017,
+  author={Yu-Hsuan Wang and Cheng-Tao Chung and Hung-Yi Lee},
+  title={Gate Activation Signal Analysis for Gated Recurrent Neural Networks and its Correlation with Phoneme Boundaries},
+  year=2017,
+  booktitle={Proc. Interspeech 2017},
+  pages={3822--3826},
+  doi={10.21437/Interspeech.2017-877},
+  url={http://dx.doi.org/10.21437/Interspeech.2017-877}
 }
 
 ```
