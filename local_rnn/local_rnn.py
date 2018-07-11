@@ -34,8 +34,28 @@ from tensorflow.python.util import nest
 from IPython.core.debugger import Tracer
 
 # pylint: disable=protected-access
-_state_size_with_prefix = rnn_cell_impl._state_size_with_prefix
 # pylint: enable=protected-access
+
+def _state_size_with_prefix(state_size, prefix=None):
+  """Helper function that enables int or TensorShape shape specification.
+
+  This function takes a size specification, which can be an integer or a
+  TensorShape, and converts it into a list of integers. One may specify any
+  additional dimensions that precede the final state size specification.
+
+  Args:
+    state_size: TensorShape or int that specifies the size of a tensor.
+    prefix: optional additional list of dimensions to prepend.
+
+  Returns:
+    result_state_size: list of dimensions the resulting tensor size.
+  """
+  result_state_size = tensor_shape.as_shape(state_size).as_list()
+  if prefix is not None:
+    if not isinstance(prefix, list):
+      raise TypeError("prefix of _state_size_with_prefix should be a list.")
+    result_state_size = prefix + result_state_size
+  return result_state_size
 
 
 def _infer_state_dtype(explicit_dtype, state):
@@ -502,7 +522,7 @@ def dynamic_rnn(cell, inputs, sequence_length=None, initial_state=None,
   """
 
   # pylint: disable=protected-access
-  if not isinstance(cell, rnn_cell_impl._RNNCell):
+  if not isinstance(cell, rnn_cell_impl.RNNCell):
     raise TypeError("cell must be an instance of RNNCell")
   # pylint: enable=protected-access
 
