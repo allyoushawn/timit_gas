@@ -34,7 +34,7 @@ Then execute *./run.sh* to run the code.
 > * tol_window: specify the tolerance window size, 2 for 20 ms
 
 >rnn_autoencoder.py: Training
-> * scp_file: traiing data scp
+> * scp_file: training data scp
 > * dev_scp_file: development data scp
 > * max_len: the max length of data for unrolling RNN. For TIMIT, the max len is 777 frames.
 > * min_epoch: minimum epochs required for training
