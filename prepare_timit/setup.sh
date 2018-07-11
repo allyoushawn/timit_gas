@@ -3,7 +3,7 @@
 #specify the followings
 kaldi_root=/opt/kaldi
 timit_root=/share/corpus/timit
-export feat_loc=/home/allyoushawn/handover/timit_gas//timit_feat
+export feat_loc=/home/allyoushawn/handover/timit_gas/timit_feat
 
 #leave the followings untouched
 old_kaldi_root=/home/allyoushawn/Kaldi
